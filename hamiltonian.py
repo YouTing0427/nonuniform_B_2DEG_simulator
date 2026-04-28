@@ -17,9 +17,9 @@ def build_H(ky, Ve, nmax):
     return c_p2 * p2_mat + c_x * x_mat + c_x2 * x2_mat + c_x4 * x4_mat + c_x0 * np.eye(nmax)
 
 #if __name__ == '__main__':
-    H = build_H(ky=(-0.15*AU_TO_NM), Ve=0, nmax=201)
-    print("H_shape", H.shape)
-    print("hermition?", np.allclose(H, H.conj().T))
+    #H = build_H(ky=(-0.15*AU_TO_NM), Ve=0, nmax=201)
+    #print("H_shape", H.shape)
+    #print("hermition?", np.allclose(H, H.conj().T))
 
 H = build_H(ky=(-0.15*AU_TO_NM), Ve=0.5 * hbar * w_c / e , nmax=51)
 # [ky]=nm^-1 AU_TO_NM=1/AU_TO_(NM^-1)=(NM^-1)_TO_AU
