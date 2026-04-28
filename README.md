@@ -33,7 +33,15 @@ a tuneable high-density-of-states condition relevant to quantum Hall devices.
 
 ![spectrum_Ve1.5](figures/spectrum_Ve1.5.png)
 
-The spectrum evolves with electric field, showing flattening of selected bands in quantized field magnitudes.
+The spectrum evolves with electric field, at eVe = 0.5ℏωc and 1.5ℏωc, the first and second bands become completely flat respectively — reproducing Fig. 3 of arXiv:2601.05064.
+
+## How to run
+python potential.py      # plots effective potential V(x)
+python spectrum.py       # computes and plots energy spectrum E(ky)
+
+## In progress
+Time-dependent extension (AC electric field): computing high-order harmonic 
+Hall current generation under periodic driving.
 
 ## Structure
 - `params.py` — physical constants in Hartree atomic units (GaAs/AlGaAs parameters)
