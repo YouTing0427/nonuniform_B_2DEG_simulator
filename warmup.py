@@ -2,7 +2,7 @@ import numpy as np
 from scipy.linalg import expm
 import matplotlib.pyplot as plt
 
-dt = 0.1
+dt = 0.5
 f = 1
 times, p0s, p1s = [], [], []
 psi = np.array([1,0], dtype = complex)
@@ -19,7 +19,7 @@ def evolve(psi, H, dt):
 
 print("f=", f, "tgrid=", dt, "\nt | psi0 | psi1 | norm")
 
-for tgrid in range(50):
+for tgrid in range(10):
     t = tgrid * dt
 
     psi = evolve(psi, Hamiltonian(t), dt)
@@ -27,7 +27,7 @@ for tgrid in range(50):
     p0s.append(abs(psi[0])**2)
     p1s.append(abs(psi[1])**2)
 
-for tgrid in range(10):
+for tgrid in range(100):
     t = tgrid * dt
     psi = evolve(psi, Hamiltonian(t), dt)
     p0 = abs(psi[0])**2
@@ -43,5 +43,5 @@ plt.xlabel('time')
 plt.ylabel('probability')
 plt.legend()
 plt.tight_layout()
-plt.savefig('warmup.png', dpi = 150)
+plt.savefig('warmup3.png', dpi = 150)
 plt.show()
