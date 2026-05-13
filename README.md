@@ -35,13 +35,22 @@ a tuneable high-density-of-states condition relevant to quantum Hall devices.
 
 The spectrum evolves with electric field, at eVe = 0.5ℏωc and 1.5ℏωc, the first and second bands become completely flat respectively — reproducing Fig. 3 of arXiv:2601.05064.
 
+### (3) Time evolution under AC driving
+![prob_evo1](figures/prob_evo1.gif)
+
+![prob_evo2](figures/prob_evo2.gif)
+
+Time-evolution of probability density under AC driving. $\omega_{ac}$ is the AC field frequency; n is the energy level (0 for ground state.)
+
+
 ## How to run
-python potential.py      # plots effective potential V(x)
-python spectrum.py       # computes and plots energy spectrum E(ky)
+python potential.py        # plots effective potential V(x)
+python spectrum.py         # computes and plots energy spectrum E(ky)
+python wave_function.py    # plots probability density
+python time_visualise.py   # plots probability density time-evolution
 
 ## In progress
-Time-dependent extension (AC electric field): computing high-order harmonic 
-Hall current generation under periodic driving.
+high-order harmonic Hall current generation under periodic driving.
 
 ## Structure
 - `params.py` — physical constants in Hartree atomic units (GaAs/AlGaAs parameters)
@@ -49,6 +58,7 @@ Hall current generation under periodic driving.
 - `hamiltonian.py` — builds the quartic Hamiltonian matrix H(ky, Ve)
 - `potential.py` — plots the effective potential V(x) for different ky
 - `spectrum.py` — full ky sweep, energy spectrum E(ky)
+- `time_coeffs.py` — Time-evolution of weights on different Hermite basis
 
 ## Requirements
 pip install numpy scipy matplotlib
